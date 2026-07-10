@@ -41,7 +41,8 @@ adcp_folder <- "raw/adcp"
 
 # Finally, run through ALL of "<cruiseID>_process_data.R" once more to ensure
 # there are no issues.
-# Once this is done:
+# Once this is done (You MUST do this step within the same session as the final _process_data.R run
+# to ensure that all packages used are recorded):
 # Print Session Info------------------------------------------------------------
 
 # Set cruiseID and run this line to log package versions used to analyze data in
