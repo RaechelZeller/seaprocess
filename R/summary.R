@@ -184,7 +184,7 @@ create_summary <- function(summary_input, elg_input,
       }
       tension_peak <- elg |>
         dplyr::slice(sti[i]:eni[i]) |>
-        dplyr::filter(wire_payout >= 0) |>
+      #  dplyr::filter(wire_payout >= 0) |> #CC sheave has negative payout as well. Commented out Spring 2026
         dplyr::slice_max(order_by = wire_tension)
 
       # Show warning for two lines of max tension
@@ -662,7 +662,7 @@ Please hand enter max tension into station summary sheet.")
       # and find the maximum
       tension_peak <- lci |>
         dplyr::slice(sti_t[i]:eni_t[i]) |>
-        dplyr::filter(payout >= 0) |>
+      #  dplyr::filter(payout >= 0) |> #CC sheave has negative payout as well. Commented out Spring 2026
         dplyr::slice_max(order_by = tension)
 
 
